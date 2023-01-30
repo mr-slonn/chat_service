@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="994e89bc-a4a1-46e3-a019-791cf80bf8fe" name="Changes" comment="Доделаны функции. Написаны тесты">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/service/ServiceException.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/service/ChatServiceTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/Chat.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/Chat.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/Message.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/Message.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/service/ChatService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/service/ChatService.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +25,17 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="chat_service" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -44,6 +49,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -65,10 +75,11 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "last_opened_file_path": "C:/Devs/netology/chat_service",
-    "project.structure.last.edited": "Modules",
+    "last_opened_file_path": "F:/Antonov/Devs/netology/chat_service",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -185,9 +196,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.ChatServiceTest" />
+        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.ChatServiceTest.getMessage" />
         <item itemvalue="Gradle.ChatServiceTest.getUnreadMessagesCount" />
-        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.ChatServiceTest.deleteMessage" />
       </list>
     </recent_temporary>
@@ -238,6 +249,14 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/service/ChatService.kt</url>
+          <line>72</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

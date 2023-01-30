@@ -7,10 +7,10 @@ object ChatService {
 
     private val chats = mutableMapOf<Int, Chat>()
 
-    fun clear()
-    {
+    fun clear() {
         chats.clear()
     }
+
     //4. Создать новое сообщение.
     fun addMessage(userId: Int, message: Message) {
         chats.getOrPut(userId) { Chat() }.messages += message
@@ -36,8 +36,6 @@ object ChatService {
         } else {
             false
         }
-
-
     }
 
 
@@ -53,7 +51,6 @@ object ChatService {
 
     //Видеть, сколько чатов не прочитано (например, service.getUnreadChatsCount). В каждом из таких чатов есть хотя бы одно непрочитанное сообщение.
     fun getUnreadChatsCount()
-    //= chats.values.count { it -> it.messages.any { !it.read && it.isDeleted } }
             = chats.values.count { it.messages.any { message: Message -> !message.isDeleted && !message.read } }
 
     //сделал для себя Видеть, сколько сообщений не прочитано
@@ -72,20 +69,9 @@ object ChatService {
     //ID чата;
     //ID последнего сообщения, начиная с которого нужно подгрузить более новые;
     //количество сообщений. После того как вызвана эта функция, все отданные сообщения автоматически считаются прочитанными.
-
-//    fun getMessage(userId: Int, lastMessageId: Int, countMessage: Int) {
-////        var messages: MutableList<Message> = mutableListOf()
-////
-////            messages =
-////                chats[userId]?.messages?.filter { it.id >= lastMessageId && !it.isDeleted }?: mutableListOf()
-////
-////            messages.forEach { message: Message -> message.read = true }
-////
-////
-////        return messages
-//
-//    }
-fun getMessage(userId: Int, lastMessageId: Int, countMessage: Int) =  chats[userId]?.messages?.filter { it.id >= lastMessageId && !it.isDeleted }?.take(countMessage)?.onEach { it.read = true }
+    fun getMessage(userId: Int, lastMessageId: Int, countMessage: Int) =
+        chats[userId]?.messages?.asSequence()?.filter { it.id >= lastMessageId && !it.isDeleted }?.take(countMessage)
+            ?.onEach { it.read = true }?.toList()
 
     fun printChats() {
         println(chats)
